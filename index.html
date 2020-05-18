@@ -22,16 +22,16 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col-md-3 col-sm-5 col-xs-7 col-8" style="background-color:coral;">
-                <p> H </p>
+            <div class="col-lg-7 col-md-1 col-sm-7 col-1" style="background-color:coral;">
+                <p id="text1"> x </p>
             </div>
             
-            <div class="col-lg-4 col-md-6 col-sm-4 col-xs-3 col-2" style="background-color: cornflowerblue;">
-                <p> E </p>
+            <div class="col-lg-4 col-md-5 col-sm-4 col-5" style="background-color: cornflowerblue;">
+                <p id="text2"> x </p>
             </div>
 
-            <div class="col-lg-6 col-md-3 col-sm-3 col-xs-2 col-2" style="background-color: darkorchid;">
-                <p> Y </p>
+            <div class="col-lg-1 col-md-6 col-sm-1 col-6" style="background-color: darkorchid;">
+                <p id="text3"> x </p>
                 
                 <script>
                     function person (name, age){
@@ -39,25 +39,53 @@
                         this.age = age;
                     }
                     
-                    var d = new person ("Nassor", 21);
-                    document.write(d.age);
+                    var screen_width = screen.width;
+                    if (screen_width > 1200){
+                        document.getElementById('text1').innerHTML = "lg-7";
+                        document.getElementById('text2').innerHTML = "lg-4";
+                        document.getElementById('text3').innerHTML = "lg-1";
                         
-            </script>
+                    }
+                    
+                    if ((screen_width > 991) && (screen_width < 1200)){
+                        document.getElementById('text1').innerHTML = "md-1";
+                        document.getElementById('text2').innerHTML = "md-5";
+                        document.getElementById('text3').innerHTML = "md-6";
+                        
+                    }                    
+                    
+                    if ((screen_width > 575) && (screen_width <991)){
+                        document.getElementById('text1').innerHTML = "sm-7";
+                        document.getElementById('text2').innerHTML = "sm-4";
+                        document.getElementById('text3').innerHTML = "sm-1";
+                        
+                    }                    
+                    
+                    if (screen_width < 576){
+                        document.getElementById('text1').innerHTML = "col-1";
+                        document.getElementById('text2').innerHTML = "col-5";
+                        document.getElementById('text3').innerHTML = "col-6";
+                        
+                    }
+                    
+                    
+                </script>
             </div>
             
 
         </div>
 
         <div class="row mt-5">
-            <div class="col-md-4" style="background-color:coral;">
+            
+            <div class="col-lg-7 col-md-1 col-sm-7 col-1" style="background-color:coral;">
                 <p> H </p>
             </div>
             
-            <div class="col-md-4" style="background-color: cornflowerblue;">
+            <div class="col-lg-4 col-md-5 col-sm-4 col-5" style="background-color: cornflowerblue;">
                 <p> E </p>
             </div>
 
-            <div class="col-md-4" style="background-color: darkorchid;">
+            <div class="col-lg-1 col-md-6 col-sm-1 col-6" style="background-color: darkorchid;">
                 <p> Y </p>
                 
                 <script>
@@ -68,7 +96,7 @@
                     
                     var d = new person ("Nassor", 21);
                     document.write(d.age);
-                        
+
                 </script>
             </div>
             
